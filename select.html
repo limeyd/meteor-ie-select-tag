@@ -1,0 +1,25 @@
+<head>
+  <title>select</title>
+</head>
+
+<body>
+  {{> hello}}
+</body>
+
+<template name="hello">
+  <h1>Hello World!</h1>
+  <input type="button" value="Click" />
+  <h3>Using Handlebars Helper</h3>
+  {{select}}
+
+  {{> tests}}
+</template>
+
+<template name="tests">
+<h3>Using Template with Helper</h3>
+<select>
+    {{#each tests}}
+    <option>{{name}}</option>
+    {{/each}}
+</select>
+</template>
